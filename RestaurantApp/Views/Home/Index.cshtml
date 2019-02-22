@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<h1>Restaurant Picker</h1>
+<p>Remember the restaurants you keep meaning to try!</p>
+<p>@Html.ActionLink("Add a restaurant", "Add", "Home")</p>
+<p>Give me a @Html.ActionLink("random", "Random", "Home") place to try!</p>
+<p></p>
+
+<h3>Restaurants You Have Already Added</h3>
+<ul>
+	@foreach (var restaurant in ViewBag.restaurants)
+	{
+		<li>@restaurant.Name</li>
+	}
+
+</ul>
